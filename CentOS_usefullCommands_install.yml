@@ -1,0 +1,5 @@
+---
+- hosts: Centos_servers
+  gather_facts: false
+  roles:
+          - CentOS_usefullCommands_install
