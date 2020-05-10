@@ -1,0 +1,32 @@
+---
+
+- name: ----- install vim -----
+  dnf:
+          name: vim
+          state: present
+  tags: [install vim]
+
+- name: ----- install net-tools -----
+  dnf:
+          name: net-tools
+          state: present
+  tags: [install net-tools]
+
+- name: ----- install curl -----
+  dnf:
+          name: curl
+          state: present
+  tags: [install curl]
+
+- name: ----- install telnet -----
+  dnf:
+          name: telnet
+          state: present
+  tags: [install telnet]
+
+- name: ----- install chrony packages -----
+  dnf:
+          name: [chrony]
+          state: present
+  notify: start and enable chronyd
+  tags: [install chrony packages]
